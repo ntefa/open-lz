@@ -1,0 +1,48 @@
+# ####################################################################################################### #
+# Copyright (c) 2023 Oracle and/or its affiliates,  All rights reserved.                                  #
+# Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #                                            #
+# ####################################################################################################### #
+
+---
+compartments_configuration:
+  enable_delete: true
+  compartments:
+    #L2
+    CMP-PROD-KEY:
+      name: Prod
+      description: LZ compartment for prod environment
+      children:
+        #L3
+        CMP-NETWORK-PROD-KEY:
+          name: Network
+          description: LZ compartment for prod network resources
+        #L3
+        CMP-SECURITY-PROD-KEY:
+          name: Security
+          description: LZ compartment for prod security resources
+        #L3
+        CMP-APPLICATION-PROD-KEY:
+          name: Application
+          description: LZ compartment for prod application resources
+        #L3
+        CMP-DATABASE-PROD-KEY:
+          name: Database
+          description: LZ compartment for prod database resources
+
+groups_configuration:
+  groups:
+    OCI-NETWORK-ADMINS:
+      name: oci-network-admins
+      description: group responsible of managing network resources
+    OCI-SECURITY-ADMINS:
+      name: oci-security-admins
+      description: group responsible of managing security resources
+    OCI-APPLICATION-ADMINS:
+      name: oci-application-admins
+      description: group responsible of managing application resources
+    OCI-DATABASE-ADMINS:
+      name: oci-database-admins
+      description: group responsible of managing database resources
+
+  dynamic_groups: {}
+policies_configuration: {}
