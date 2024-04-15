@@ -9,8 +9,8 @@ compartments_configuration:
   compartments:
     #L2
     CMP-PROD-KEY:
-      name: Prod
-      description: LZ compartment for prod environment
+      name: Production
+      description: LZ compartment for production environment
       children:
         #L3
         CMP-NETWORK-PROD-KEY:

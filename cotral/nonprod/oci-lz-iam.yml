@@ -1,0 +1,37 @@
+# ####################################################################################################### #
+# Copyright (c) 2023 Oracle and/or its affiliates,  All rights reserved.                                  #
+# Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #                                            #
+# ####################################################################################################### #
+
+---
+compartments_configuration:
+  enable_delete: true
+  compartments:
+    #L2
+    CMP-TEST-KEY:
+      name: Test
+      description: LZ compartment for test environment
+      children:
+        #L3
+        CMP-NETWORK-TEST-KEY:
+          name: Network
+          description: LZ compartment for test network resources
+        #L3
+        CMP-SECURITY-TEST-KEY:
+          name: Security
+          description: LZ compartment for test security resources
+        #L3
+        CMP-APPLICATION-TEST-KEY:
+          name: Application
+          description: LZ compartment for test application resources
+        #L3
+        CMP-DATABASE-TEST-KEY:
+          name: Database
+          description: LZ compartment for test database resources
+
+# groups_configuration:
+#   groups:
+
+
+#   dynamic_groups: {}
+# policies_configuration: {}
